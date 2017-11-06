@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Login_mail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.unb.cic.mp.marketmaster.MainActivity">
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="48dp" />
+
+    <TextView
+        android:id="@+id/Entrar_txt"
+        android:layout_width="41dp"
+        android:layout_height="19dp"
+        android:text="Email:"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="29dp" />
+
+    <TextView
+        android:id="@+id/Pass_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password:"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="109dp" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="128dp" />
+
+    <Button
+        android:id="@+id/Entrar_btn"
+        android:layout_width="147dp"
+        android:layout_height="48dp"
+        android:text="Entrar"
+        tools:layout_editor_absoluteX="119dp"
+        tools:layout_editor_absoluteY="187dp" />
+
+    <TextView
+        android:id="@+id/ou_cadastre-se_txt"
+        android:layout_width="142dp"
+        android:layout_height="35dp"
+        android:text="Ou cadastre-se:"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="257dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="113dp"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        tools:layout_editor_absoluteX="123dp"
+        tools:layout_editor_absoluteY="319dp" />
+</android.support.constraint.ConstraintLayout>
