@@ -23,15 +23,13 @@
         </activity>
         <activity
             android:name=".CadastroActivity"
-            android:label="@string/title_activity_cadastro">
-        </activity>
-
-
+            android:label="@string/title_activity_cadastro" />
         <activity
             android:name=".GerenciarItensActivity"
-            android:label="@string/title_activity_gerenciar_itens">
-        </activity>
-
+            android:label="@string/title_activity_gerenciar_itens" />
+        <activity android:name=".ListaActivity" />
+        <activity android:name=".GerenciarListasActivity" />
+        <activity android:name=".ItemActivity"></activity>
     </application>
 
 </manifest>
