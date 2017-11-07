@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Market Master</string>
     <string name="title_activity_cadastro">Cadastro</string>
+    <string name="title_activity_gerenciar_itens">Itens</string>
 
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>

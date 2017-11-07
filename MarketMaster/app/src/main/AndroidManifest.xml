@@ -21,10 +21,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".CadastroActivity"
             android:label="@string/title_activity_cadastro">
+        </activity>
+
+
+        <activity
+            android:name=".GerenciarItensActivity"
+            android:label="@string/title_activity_gerenciar_itens">
         </activity>
 
     </application>
