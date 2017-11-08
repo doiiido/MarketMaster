@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.unb.cic.mp.marketmaster.PegarItemActivity">
+
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nome do Item"
+        android:textSize="40dp"
+        tools:layout_editor_absoluteX="65dp"
+        tools:layout_editor_absoluteY="36dp" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:text="Editar preço do item:"
+        app:layout_constraintBottom_toTopOf="@+id/editText12"
+        tools:layout_editor_absoluteX="35dp" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:text="Detalhes"
+        app:layout_constraintBottom_toTopOf="@+id/editText13"
+        tools:layout_editor_absoluteX="35dp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="21dp"
+        android:layout_marginBottom="8dp"
+        android:text="Seseja marcar o item como pego?"
+        app:layout_constraintBottom_toTopOf="@+id/button5"
+        tools:layout_editor_absoluteX="86dp" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="231dp"
+        android:layout_height="34dp"
+        android:layout_marginBottom="68dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@color/colorButton"
+        android:text="Pegar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editText12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.176"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="144dp" />
+
+    <EditText
+        android:id="@+id/editText13"
+        android:layout_width="wrap_content"
+        android:layout_height="49dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.176"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="231dp" />
+
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Quantidade:"
+        app:layout_constraintEnd_toStartOf="@+id/seekBar2"
+        app:layout_constraintHorizontal_bias="0.975"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="297dp" />
+
+    <SeekBar
+        android:id="@+id/seekBar2"
+        style="@style/AlertDialog.AppCompat"
+        android:layout_width="189dp"
+        android:layout_height="18dp"
+        android:layout_marginEnd="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="297dp" />
+
+
+</android.support.constraint.ConstraintLayout>

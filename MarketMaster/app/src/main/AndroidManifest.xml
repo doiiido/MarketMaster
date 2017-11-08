@@ -40,17 +40,20 @@
             android:label="@string/title_activity_descricao_item" />
         <activity
             android:name=".AdicionarListaActivity"
-            android:label="@string/title_activity_adicionar_lista">
-        </activity>
+            android:label="@string/title_activity_adicionar_lista" />
         <activity
             android:name=".CadastroItemActivity"
-            android:label="@string/title_activity_cadastro_item">
-        </activity>
-
+            android:label="@string/title_activity_cadastro_item" />
         <activity
             android:name=".EditarPerfilActivity"
-            android:label="@string/title_activity_editar_perfil">
-        </activity>
+            android:label="@string/title_activity_editar_perfil" />
+        <activity android:name=".ListaFinalizadaActivity" />
+        <activity android:name=".SupermercadoActivity" />
+        <activity android:name=".GerenciarItemAposEscolhaActivity" />
+        <activity android:name=".ItemAposEscolhaActivity" />
+        <activity android:name=".PegarItemActivity" />
+        <activity android:name=".FinalizarActivity" />
+        <activity android:name=".ItensNaoPegosActivity"></activity>
     </application>
 
 </manifest>
