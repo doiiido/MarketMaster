@@ -34,11 +34,18 @@
         <activity android:name=".ItemActivity" />
         <activity
             android:name=".AdicionarItensActivity"
-            android:label="@string/title_activity_adicionar_itens"></activity>
-
+            android:label="@string/title_activity_adicionar_itens" />
         <activity
             android:name=".DescricaoItemActivity"
-            android:label="@string/title_activity_descricao_item">
+            android:label="@string/title_activity_descricao_item" />
+        <activity
+            android:name=".AdicionarListaActivity"
+            android:label="@string/title_activity_adicionar_lista">
+
+        </activity>
+
+        <activity android:name=".CadastroItemActivity"
+            android:label="@string/title_activity_cadastro_item">
 
         </activity>
     </application>

@@ -5,6 +5,8 @@
     <string name="title_activity_gerenciar_listas">Listas de Compras</string>
     <string name="title_activity_adicionar_itens">Adicionar Item</string>
     <string name="title_activity_descricao_item">Detalhes</string>
+    <string name="title_activity_adicionar_lista">Nova Lista</string>
+    <string name="title_activity_cadastro_item">Cadastro de Item</string>
 
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
