@@ -24,8 +24,17 @@
         android:layout_height="wrap_content"
         android:clickable="true"
         app:backgroundTint="@color/colorButton"
-        app:srcCompat="@color/colorButton"
+        app:srcCompat="@android:drawable/ic_input_add"
         tools:layout_editor_absoluteX="271dp"
+        tools:layout_editor_absoluteY="408dp" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorButton"
+        android:text="Finalizar"
+        tools:layout_editor_absoluteX="56dp"
         tools:layout_editor_absoluteY="408dp" />
 
 </android.support.constraint.ConstraintLayout>
