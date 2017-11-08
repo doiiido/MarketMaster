@@ -28,8 +28,19 @@
             android:name=".GerenciarItensActivity"
             android:label="@string/title_activity_gerenciar_itens" />
         <activity android:name=".ListaActivity" />
-        <activity android:name=".GerenciarListasActivity" />
-        <activity android:name=".ItemActivity"></activity>
+        <activity
+            android:name=".GerenciarListasActivity"
+            android:label="@string/title_activity_gerenciar_listas" />
+        <activity android:name=".ItemActivity" />
+        <activity
+            android:name=".AdicionarItensActivity"
+            android:label="@string/title_activity_adicionar_itens"></activity>
+
+        <activity
+            android:name=".DescricaoItemActivity"
+            android:label="@string/title_activity_descricao_item">
+
+        </activity>
     </application>
 
 </manifest>

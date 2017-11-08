@@ -2,6 +2,9 @@
     <string name="app_name">Market Master</string>
     <string name="title_activity_cadastro">Cadastro</string>
     <string name="title_activity_gerenciar_itens">Itens</string>
+    <string name="title_activity_gerenciar_listas">Listas de Compras</string>
+    <string name="title_activity_adicionar_itens">Adicionar Item</string>
+    <string name="title_activity_descricao_item">Detalhes</string>
 
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
