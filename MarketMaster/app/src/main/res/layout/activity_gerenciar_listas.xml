@@ -25,7 +25,7 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline_bottom"
         app:layout_constraintEnd_toStartOf="@+id/guideline_end"
         app:rippleColor="@color/cardview_light_background"
-        app:srcCompat="@color/colorButton" />
+        app:srcCompat="@android:drawable/ic_menu_add" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline_end"

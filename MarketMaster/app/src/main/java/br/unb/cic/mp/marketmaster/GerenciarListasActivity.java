@@ -18,7 +18,7 @@ public class GerenciarListasActivity extends AppCompatActivity {
         mAddItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(GerenciarListasActivity.this, ListaActivity.class);
+                Intent intent = new Intent(GerenciarListasActivity.this, AdicionarListaActivity.class);
                 startActivity(intent);
             }
         });

@@ -7,64 +7,63 @@
     android:layout_height="match_parent"
     tools:context="br.unb.cic.mp.marketmaster.AdicionarItensActivity">
 
-    <Spinner
-        android:id="@+id/spinner2"
-        android:layout_width="362dp"
-        android:layout_height="42dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="101dp" />
-
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/escolha_um_item_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:text="Escolha um item cadastrado:"
-        app:layout_constraintBottom_toTopOf="@+id/spinner2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.042"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.954" />
+        app:layout_constraintBottom_toTopOf="@id/itens_disp"
+        app:layout_constraintStart_toStartOf="@id/guideline_txt" />
+
+    <Spinner
+        android:id="@+id/itens_disp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/add_item"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@id/escolha_um_item_txt" />
 
     <Button
-        android:id="@+id/button3"
-        android:layout_width="254dp"
-        android:layout_height="38dp"
-        android:layout_marginBottom="32dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:background="@color/colorButton"
+        android:id="@+id/add_item"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
         android:text="Adicionar"
-        app:layout_constraintBottom_toTopOf="@+id/textView9"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:layout_marginBottom="20dp"
-        android:text="Ou cadastre um novo item:"
-        app:layout_constraintBottom_toTopOf="@+id/button4"
-        tools:layout_editor_absoluteX="108dp" />
+        app:layout_constraintBottom_toTopOf="@id/voltar"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@id/itens_disp" />
 
     <Button
-        android:id="@+id/button4"
-        android:layout_width="252dp"
-        android:layout_height="41dp"
-        android:layout_marginBottom="44dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:background="@color/colorButton"
-        android:text="Cadastrar"
+        android:id="@+id/voltar"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:text="Voltar"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@id/add_item" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.0800" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.0500" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9500" />
+
 </android.support.constraint.ConstraintLayout>
