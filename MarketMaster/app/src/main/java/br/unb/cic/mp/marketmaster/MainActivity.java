@@ -58,7 +58,6 @@ public class MainActivity extends AppCompatActivity {
      */
     private void cadastrarNovoUsuario() {
         Intent intent = new Intent(this, CadastroActivity.class);
-        finish();
         startActivity(intent);
     }
 
@@ -82,7 +81,6 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     Toast.makeText(MainActivity.this, "Massa, fera.", Toast.LENGTH_SHORT);
                     Intent intent = new Intent(MainActivity.this, GerenciarListasActivity.class);
-                    finish();
                     startActivity(intent);
                 }
             }

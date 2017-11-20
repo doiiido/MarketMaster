@@ -67,20 +67,10 @@
         android:layout_height="60dp"
         android:backgroundTint="@color/colorButton"
         android:text="Entrar"
-        app:layout_constraintBottom_toTopOf="@id/ou_cadastre-se_txt"
+        app:layout_constraintBottom_toTopOf="@id/cadastrar_btn"
         app:layout_constraintEnd_toEndOf="@id/guideline_end"
         app:layout_constraintStart_toStartOf="@id/guideline_start"
         app:layout_constraintTop_toBottomOf="@id/senha_input" />
-
-    <TextView
-        android:id="@+id/ou_cadastre-se_txt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ou cadastre-se:"
-        app:layout_constraintBottom_toTopOf="@id/cadastrar_btn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/entrar_btn" />
 
     <Button
         android:id="@+id/cadastrar_btn"
@@ -91,7 +81,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/guideline_end"
         app:layout_constraintStart_toStartOf="@id/guideline_start"
-        app:layout_constraintTop_toBottomOf="@id/ou_cadastre-se_txt" />
+        app:layout_constraintTop_toBottomOf="@id/entrar_btn" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline_txt"
