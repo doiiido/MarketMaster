@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "923150881461",
+    "firebase_url": "https://market-master-9509f.firebaseio.com",
+    "project_id": "market-master-9509f",
+    "storage_bucket": "market-master-9509f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:923150881461:android:f676af60b14cb50b",
+        "android_client_info": {
+          "package_name": "br.unb.cic.mp.marketmaster"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "923150881461-nu44c1toj6ek1l1jokl5dlv6clm627vl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAV6144fMvioNNRUoTKrHo1VGk7YcL7J5w"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
