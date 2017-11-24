@@ -41,11 +41,21 @@
         android:id="@+id/finaliza"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Comprar"
+        app:layout_constraintBottom_toBottomOf="@id/volta"
         app:layout_constraintEnd_toEndOf="@id/guideline_end"
         app:layout_constraintStart_toStartOf="@id/guideline_start"
         app:layout_constraintTop_toBottomOf="@id/lista_itens" />
+
+    <Button
+        android:id="@+id/volta"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Voltar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@id/finaliza" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline_end_button"

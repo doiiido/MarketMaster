@@ -10,6 +10,8 @@ import android.widget.Toast;
 
 public class GerenciarListasActivity extends AppCompatActivity {
 
+    // TODO implementar entrada nas listas, e o uso de listas, que na moral que é um cu de fazer (adapter - se você lendo não sou eu, procure isso e boa sorte)
+    // Mesma ideia na classe ListaActivity
     private FloatingActionButton mAddItem;
 
     @Override
