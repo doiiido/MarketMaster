@@ -44,6 +44,12 @@
             android:name=".CadastroItemActivity"
             android:label="@string/title_activity_cadastro_item" />
         <activity
+            android:name=".AdminActivity"
+            android:label="@string/title_activity_tela_admin" />
+        <activity
+            android:name=".CriaItemActivity"
+            android:label="@string/title_activity_cria_item" />
+        <activity
             android:name=".EditarPerfilActivity"
             android:label="@string/title_activity_editar_perfil" />
         <activity android:name=".ListaFinalizadaActivity" />

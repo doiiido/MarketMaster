@@ -2,12 +2,10 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/Login_mail"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBackground"
-    tools:context="br.unb.cic.mp.marketmaster.MainActivity"
-    tools:layout_editor_absoluteY="81dp">
+    tools:context="br.unb.cic.mp.marketmaster.MainActivity">
 
     <TextView
         android:id="@+id/login_txt"

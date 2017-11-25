@@ -2,6 +2,7 @@ package br.unb.cic.mp.marketmaster;
 
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,6 +16,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class CadastroActivity extends AppCompatActivity {
 
@@ -24,6 +27,7 @@ public class CadastroActivity extends AppCompatActivity {
     private AutoCompleteTextView mCepView;
     private Button mBotaoConclui;
 
+    private DatabaseReference mDatabaseReference;
     private FirebaseAuth mAut;
 
     @Override
@@ -31,13 +35,14 @@ public class CadastroActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro);
 
-        mNomeView = (AutoCompleteTextView) findViewById(R.id.nome_input);
-        mEmailView = (AutoCompleteTextView) findViewById(R.id.email_input);
-        mSenhaView = (EditText) findViewById(R.id.senha_input);
-        mCepView = (AutoCompleteTextView) findViewById(R.id.cep_input);
+        mNomeView = findViewById(R.id.nome_input);
+        mEmailView = findViewById(R.id.email_input);
+        mSenhaView = findViewById(R.id.senha_input);
+        mCepView = findViewById(R.id.cep_input);
         mBotaoConclui = findViewById(R.id.botao_concluir);
 
         mAut = FirebaseAuth.getInstance();
+        mDatabaseReference = FirebaseDatabase.getInstance().getReference();
 
         mBotaoConclui.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -90,8 +95,10 @@ public class CadastroActivity extends AppCompatActivity {
     }
 
     private void criaUsuarioFirebase() {
-        String email = mEmailView.getText().toString();
+        final String email = mEmailView.getText().toString();
         String senha = mSenhaView.getText().toString();
+        String nome = mNomeView.getText().toString();
+        String cep = mCepView.getText().toString();
         mAut.createUserWithEmailAndPassword(email, senha).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
@@ -103,6 +110,14 @@ public class CadastroActivity extends AppCompatActivity {
                             .setIcon(android.R.drawable.ic_dialog_alert)
                             .show();
                 } else {
+                    String nome = mNomeView.getText().toString();
+                    String cep = mCepView.getText().toString();
+                    NovoUsuario usuario = new NovoUsuario(nome, email, cep);
+                    mDatabaseReference.child("usuarios").child(nome).push().setValue(usuario);
+
+                    SharedPreferences prefs = getSharedPreferences("UsuarioMM", 0);
+                    prefs.edit().putString("usuario", nome).apply();
+
                     Intent intent = new Intent(CadastroActivity.this, MainActivity.class);
                     finish();
                     startActivity(intent);

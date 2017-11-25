@@ -1,6 +1,7 @@
 package br.unb.cic.mp.marketmaster;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.Image;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
@@ -31,10 +32,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mEmailView = (AutoCompleteTextView) findViewById(R.id.email_input);
-        mSenhaView = (EditText) findViewById(R.id.senha_input);
-        mSignUp = (Button) findViewById(R.id.cadastrar_btn);
-        mSignIn = (Button) findViewById(R.id.entrar_btn);
+        mEmailView = findViewById(R.id.email_input);
+        mSenhaView = findViewById(R.id.senha_input);
+        mSignUp = findViewById(R.id.cadastrar_btn);
+        mSignIn = findViewById(R.id.entrar_btn);
 
         mAut = FirebaseAuth.getInstance();
 
@@ -68,23 +69,38 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, "Log in...", Toast.LENGTH_SHORT).show();
         String email = mEmailView.getText().toString();
         String senha = mSenhaView.getText().toString();
-        mAut.signInWithEmailAndPassword(email, senha).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if (!task.isSuccessful()) {
-                    new AlertDialog.Builder(MainActivity.this)
-                            .setTitle("Oops")
-                            .setMessage(task.getException().toString())
-                            .setPositiveButton(android.R.string.ok, null)
-                            .setIcon(android.R.drawable.ic_dialog_alert)
-                            .show();
-                } else {
-                    Toast.makeText(MainActivity.this, "Massa, fera.", Toast.LENGTH_SHORT);
-                    Intent intent = new Intent(MainActivity.this, GerenciarListasActivity.class);
-                    startActivity(intent);
+        if (email.equals("") || senha.equals("")) {
+            Toast.makeText(this, "Por favor, ambos os campos de login e senha são necessários!", Toast.LENGTH_SHORT);
+            // TODO saco cheio
+            Intent intent = new Intent(this, AdminActivity.class);
+            startActivity(intent);
+        } else if (email.equals("admin") && senha.equals("jangostosao")) {
+            Intent intent = new Intent(this, AdminActivity.class);
+            startActivity(intent);
+        } else {
+            mAut.signInWithEmailAndPassword(email, senha).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                    if (!task.isSuccessful()) {
+                        new AlertDialog.Builder(MainActivity.this)
+                                .setTitle("Oops")
+                                .setMessage(task.getException().toString())
+                                .setPositiveButton(android.R.string.ok, null)
+                                .setIcon(android.R.drawable.ic_dialog_alert)
+                                .show();
+                    } else {
+                        //String nome;
+                        //SharedPreferences prefs = getSharedPreferences("UsuarioMM", 0);
+                        //prefs.edit().putString("usuario", nome).apply();
+
+                        Toast.makeText(MainActivity.this, "Massa, fera.", Toast.LENGTH_SHORT);
+                        Intent intent = new Intent(MainActivity.this, GerenciarListasActivity.class);
+                        finish();
+                        startActivity(intent);
+                    }
                 }
-            }
-        });
+            });
+        }
     }
 
 }

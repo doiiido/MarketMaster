@@ -1,66 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/colorBackground"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="br.unb.cic.mp.marketmaster.AdicionarItensActivity">
-
-    <TextView
-        android:id="@+id/escolha_um_item_txt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Escolha um item cadastrado:"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/itens_disp"
-        app:layout_constraintStart_toStartOf="@id/guideline_txt" />
-
-    <Spinner
-        android:id="@+id/itens_disp"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/add_item"
-        app:layout_constraintEnd_toEndOf="@id/guideline_end"
-        app:layout_constraintStart_toStartOf="@id/guideline_start"
-        app:layout_constraintTop_toBottomOf="@id/escolha_um_item_txt" />
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorBackground"
+    tools:context="br.unb.cic.mp.marketmaster.AdminActivity">
 
     <Button
-        android:id="@+id/add_item"
+        android:id="@+id/cria_mercado"
         android:layout_width="0dp"
         android:layout_height="60dp"
-        android:text="Adicionar"
+        android:text="Adicionar Supermercado"
         app:layout_constraintBottom_toTopOf="@id/cria_item"
         app:layout_constraintEnd_toEndOf="@id/guideline_end"
         app:layout_constraintStart_toStartOf="@id/guideline_start"
-        app:layout_constraintTop_toBottomOf="@id/itens_disp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/cria_item"
         android:layout_width="0dp"
         android:layout_height="60dp"
-        android:text="Criar item novo"
-        app:layout_constraintBottom_toTopOf="@id/voltar"
+        android:text="Cria Novo Item"
+        app:layout_constraintBottom_toTopOf="@id/item_mercado_txt"
         app:layout_constraintEnd_toEndOf="@id/guideline_end"
         app:layout_constraintStart_toStartOf="@id/guideline_start"
-        app:layout_constraintTop_toBottomOf="@id/add_item" />
+        app:layout_constraintTop_toBottomOf="@id/cria_mercado" />
+
+    <TextView
+        android:id="@+id/item_mercado_txt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Para adicionar um item a um mercado, esse item já deve ter sido criado através do botão acima 'Cria Novo Item'"
+        app:layout_constraintBottom_toTopOf="@id/item_mercado_btn"
+        app:layout_constraintEnd_toEndOf="@id/guideline_txt_end"
+        app:layout_constraintStart_toStartOf="@id/guideline_txt_start"
+        app:layout_constraintTop_toBottomOf="@id/cria_item" />
 
     <Button
-        android:id="@+id/voltar"
+        android:id="@+id/item_mercado_btn"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:text="Adicionar Item A Mercado"
+        app:layout_constraintBottom_toTopOf="@id/volta"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@id/item_mercado_txt" />
+
+    <Button
+        android:id="@+id/volta"
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:text="Voltar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/guideline_end"
         app:layout_constraintStart_toStartOf="@id/guideline_start"
-        app:layout_constraintTop_toBottomOf="@id/cria_item" />
+        app:layout_constraintTop_toBottomOf="@id/item_mercado_btn" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline_txt"
+        android:id="@+id/guideline_txt_start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.0800" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_txt_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9200" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline_start"
@@ -75,5 +84,4 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.9500" />
-
 </android.support.constraint.ConstraintLayout>

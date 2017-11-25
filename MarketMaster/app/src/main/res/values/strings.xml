@@ -21,4 +21,6 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <string name="title_activity_tela_admin">Tela de admin</string>
+    <string name="title_activity_cria_item">Cria item</string>
 </resources>
