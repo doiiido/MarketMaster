@@ -97,8 +97,6 @@ public class CadastroActivity extends AppCompatActivity {
     private void criaUsuarioFirebase() {
         final String email = mEmailView.getText().toString();
         String senha = mSenhaView.getText().toString();
-        String nome = mNomeView.getText().toString();
-        String cep = mCepView.getText().toString();
         mAut.createUserWithEmailAndPassword(email, senha).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
@@ -113,12 +111,26 @@ public class CadastroActivity extends AppCompatActivity {
                     String nome = mNomeView.getText().toString();
                     String cep = mCepView.getText().toString();
                     NovoUsuario usuario = new NovoUsuario(nome, email, cep);
-                    mDatabaseReference.child("usuarios").child(nome).push().setValue(usuario);
+
+                    // Firebase não gosta desses caracteres
+                    String emailPath = email;
+                    emailPath = emailPath.replace('.', '_');
+                    emailPath = emailPath.replace('#', '-');
+                    emailPath = emailPath.replace('$', '+');
+                    emailPath = emailPath.replace('[', '(');
+                    emailPath = emailPath.replace(']', ')');
+
+                    mDatabaseReference
+                            .child("usuarios")
+                            .child(emailPath)
+                            .child("info")
+                            .push().setValue(usuario);
 
                     SharedPreferences prefs = getSharedPreferences("UsuarioMM", 0);
                     prefs.edit().putString("usuario", nome).apply();
+                    prefs.edit().putString("email", email).apply();
 
-                    Intent intent = new Intent(CadastroActivity.this, MainActivity.class);
+                    Intent intent = new Intent(CadastroActivity.this, GerenciarListasActivity.class);
                     finish();
                     startActivity(intent);
                 }

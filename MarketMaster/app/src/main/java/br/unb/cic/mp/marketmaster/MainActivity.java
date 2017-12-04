@@ -7,6 +7,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
@@ -18,6 +19,13 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,7 +33,9 @@ public class MainActivity extends AppCompatActivity {
     private EditText mSenhaView;
     private Button mSignIn;
     private Button mSignUp;
+
     private FirebaseAuth mAut;
+    private DatabaseReference mDatabaseReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         mSignIn = findViewById(R.id.entrar_btn);
 
         mAut = FirebaseAuth.getInstance();
+        mDatabaseReference = FirebaseDatabase.getInstance().getReference();
 
         mSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,9 +100,55 @@ public class MainActivity extends AppCompatActivity {
                                 .setIcon(android.R.drawable.ic_dialog_alert)
                                 .show();
                     } else {
-                        //String nome;
-                        //SharedPreferences prefs = getSharedPreferences("UsuarioMM", 0);
-                        //prefs.edit().putString("usuario", nome).apply();
+                        // Firebase não gosta desses caracteres
+                        String emailPath = mEmailView.getText().toString();
+                        emailPath = emailPath.replace('.', '_');
+                        emailPath = emailPath.replace('#', '-');
+                        emailPath = emailPath.replace('$', '+');
+                        emailPath = emailPath.replace('[', '(');
+                        emailPath = emailPath.replace(']', ')');
+
+                        mDatabaseReference
+                                .child("usuarios")
+                                .child(emailPath)
+                                .child("info")
+                                .addChildEventListener(new ChildEventListener() {
+                            @Override
+                            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+
+                                NovoUsuario usuario = dataSnapshot.getValue(NovoUsuario.class);
+                                SharedPreferences prefs = getSharedPreferences("UsuarioMM", 0);
+                                prefs.edit().putString("usuario", usuario.getNome()).apply();
+                                prefs.edit().putString("email", usuario.getEmail()).apply();
+
+                            }
+
+                            @Override
+                            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+
+                            }
+
+                            @Override
+                            public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+                            }
+
+                            @Override
+                            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+                            }
+
+                            @Override
+                            public void onCancelled(DatabaseError databaseError) {
+                                new AlertDialog.Builder(MainActivity.this)
+                                        .setTitle("Oops")
+                                        .setMessage(databaseError.getMessage())
+                                        .setPositiveButton(android.R.string.ok, null)
+                                        .setIcon(android.R.drawable.ic_dialog_alert)
+                                        .show();
+                                Log.d("MarketMaster", databaseError.getMessage().toString());
+                            }
+                        });
 
                         Toast.makeText(MainActivity.this, "Massa, fera.", Toast.LENGTH_SHORT);
                         Intent intent = new Intent(MainActivity.this, GerenciarListasActivity.class);

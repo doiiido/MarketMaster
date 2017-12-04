@@ -1,9 +1,11 @@
 package br.unb.cic.mp.marketmaster;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -22,6 +24,9 @@ public class GerenciarListasActivity extends AppCompatActivity {
         mAddItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                SharedPreferences prefs = getSharedPreferences("UsuarioMM", MODE_PRIVATE);
+                Log.d("MarketMaster", "usuario = " + prefs.getString("usuario", null));
+                Log.d("MarketMaster",  "email = " + prefs.getString("email", null));
                 Toast.makeText(GerenciarListasActivity.this, "Louco, mano.", Toast.LENGTH_SHORT);
                 Intent intent = new Intent(GerenciarListasActivity.this, AdicionarListaActivity.class);
                 startActivity(intent);

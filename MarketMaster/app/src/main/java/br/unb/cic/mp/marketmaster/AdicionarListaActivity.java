@@ -1,6 +1,7 @@
 package br.unb.cic.mp.marketmaster;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -27,6 +28,8 @@ public class AdicionarListaActivity extends AppCompatActivity {
 
         mAddLista = findViewById(R.id.cria_lista);
         mCancela = findViewById((R.id.cancela));
+        mNomeLista = findViewById(R.id.nome_lista_input);
+        mDescricaoLista = findViewById(R.id.descricao_lista_input);
         mAddLista.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -34,7 +37,46 @@ public class AdicionarListaActivity extends AppCompatActivity {
                 String input_descricao = mDescricaoLista.getText().toString();
                 if (!input_nome.equals("")) {
                     NovaLista lista = new NovaLista(input_nome, input_descricao);
-                    mDatabaseReference.child("usuarios").child(input_nome).push().setValue(lista);
+
+                    // Firebase não gosta desses caracteres
+                    String nomePath = input_nome;
+                    nomePath = nomePath.replace('.', '_');
+                    nomePath = nomePath.replace('#', '-');
+                    nomePath = nomePath.replace('$', '+');
+                    nomePath = nomePath.replace('[', '(');
+                    nomePath = nomePath.replace(']', ')');
+
+                    SharedPreferences prefs = getSharedPreferences("UsuarioMM", MODE_PRIVATE);
+
+                    String emailPath = prefs.getString("email", null);
+                    emailPath = emailPath.replace('.', '_');
+                    emailPath = emailPath.replace('#', '-');
+                    emailPath = emailPath.replace('$', '+');
+                    emailPath = emailPath.replace('[', '(');
+                    emailPath = emailPath.replace(']', ')');
+
+                    String objectId = mDatabaseReference
+                            .child("usuarios")
+                            .child(emailPath)
+                            .child("listas")
+                            .child("conteudo")
+                            .push().getKey();
+                    mDatabaseReference
+                            .child("usuarios")
+                            .child(emailPath)
+                            .child("listas")
+                            .child("conteudo")
+                            .child(objectId)
+                            .setValue(lista);
+
+                    mDatabaseReference.child("usuarios")
+                            .child(emailPath)
+                            .child("listas")
+                            .child("lista")
+                            .child(nomePath)
+                            .setValue(objectId);
+
+                    prefs.edit().putString("lista", nomePath).apply();
                 }
                 Intent intent = new Intent(AdicionarListaActivity.this, ListaActivity.class);
                 startActivity(intent);
