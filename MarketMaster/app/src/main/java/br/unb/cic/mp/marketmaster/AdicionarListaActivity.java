@@ -11,6 +11,9 @@ import android.widget.Button;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+/**
+ * Classe da tela de Adicionar uma lista nova
+ */
 public class AdicionarListaActivity extends AppCompatActivity {
 
     private DatabaseReference mDatabaseReference;

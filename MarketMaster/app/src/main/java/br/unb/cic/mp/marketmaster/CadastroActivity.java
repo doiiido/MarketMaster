@@ -19,6 +19,9 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+/**
+ * Classe que implementa a tela de casatro do aplicativo
+ */
 public class CadastroActivity extends AppCompatActivity {
 
     private AutoCompleteTextView mNomeView;

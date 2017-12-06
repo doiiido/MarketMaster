@@ -17,6 +17,9 @@ import com.google.firebase.database.DatabaseReference;
 
 import java.util.ArrayList;
 
+/**
+ * Classe que implementa o adapter do item, para usarmos o listView
+ */
 public class ItensAdapter extends BaseAdapter {
 
     private Activity mActivity;

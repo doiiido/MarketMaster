@@ -25,6 +25,9 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 
+/**
+ * Classe da tela de adicionar itens
+ */
 public class AdicionarItensActivity extends AppCompatActivity {
 
     private Button mVoltar;

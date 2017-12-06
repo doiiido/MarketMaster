@@ -20,6 +20,10 @@ import com.google.firebase.database.DatabaseReference;
 
 import java.util.ArrayList;
 
+/**
+ * Classe que implementa o adapter para o listView das listas.
+ */
+
 public class ListasAdapter extends BaseAdapter {
 
     private Activity mActivity;

@@ -1,5 +1,9 @@
 package br.unb.cic.mp.marketmaster;
 
+/**
+ * Classe que implementa uma Nova lista
+ */
+
 public class NovaLista {
 
     private String nome;

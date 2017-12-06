@@ -14,6 +14,10 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+/**
+ * Classe que implementa a tela de criar item novo
+ */
+
 public class CriaItemActivity extends AppCompatActivity {
 
     Button mCriaItem;

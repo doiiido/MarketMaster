@@ -14,6 +14,10 @@ import android.widget.Toast;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+/**
+ * Classe que gerencia as listas já criadas
+ */
+
 public class GerenciarListasActivity extends AppCompatActivity {
 
     // TODO implementar entrada nas listas, e o uso de listas

@@ -1,5 +1,9 @@
 package br.unb.cic.mp.marketmaster;
 
+/**
+ * Classe que implementa um novo Usuário
+ */
+
 public class NovoUsuario {
 
     private String nome;
