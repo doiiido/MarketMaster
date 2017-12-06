@@ -25,8 +25,11 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
+
+/**
+ * Classe da tela inicial de login
+ */
 public class MainActivity extends AppCompatActivity {
 
     private AutoCompleteTextView mEmailView;
