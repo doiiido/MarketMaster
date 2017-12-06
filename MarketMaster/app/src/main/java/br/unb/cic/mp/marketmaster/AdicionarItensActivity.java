@@ -43,6 +43,9 @@ public class AdicionarItensActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adicionar_itens);
 
+        /**
+         *  lista de itens que sera feita pelo usuário
+         */
         mListaItens = new ArrayList<>();
         mDatabaseReference = FirebaseDatabase.getInstance().getReference();
 

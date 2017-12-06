@@ -44,6 +44,10 @@ public class CadastroActivity extends AppCompatActivity {
         mAut = FirebaseAuth.getInstance();
         mDatabaseReference = FirebaseDatabase.getInstance().getReference();
 
+        /**
+         * Caso clique no concluir cadastro, deve então checar se os dados inseridos são válidos.
+         * Email sem '@' não é valido, caso os campos obrigadorios forem vazis, também será inválido
+         */
         mBotaoConclui.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -53,6 +57,11 @@ public class CadastroActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Este é o metodo que checa a validade dos campos inseridos no cadastro. Caso algum for inválido
+     * será mostrado um erro, dependendo de qual for, e o cadastro não será efetuado. Se tudo estiver correto
+     * o usuário terá um cadastro no banco de dados e poderá entrar no aplicativo.
+     */
     private void tentarSignUp() {
 
         mEmailView.setError(null);
@@ -94,6 +103,9 @@ public class CadastroActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Este método persiste o usuário no banco de dados Firebase.
+     */
     private void criaUsuarioFirebase() {
         final String email = mEmailView.getText().toString();
         String senha = mSenhaView.getText().toString();

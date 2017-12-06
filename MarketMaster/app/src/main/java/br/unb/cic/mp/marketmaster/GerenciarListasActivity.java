@@ -16,8 +16,10 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class GerenciarListasActivity extends AppCompatActivity {
 
-    // TODO implementar entrada nas listas, e o uso de listas, que na moral que é um cu de fazer (adapter - se você lendo não sou eu, procure isso e boa sorte)
-    // Mesma ideia na classe ListaActivity
+    // TODO implementar entrada nas listas, e o uso de listas
+    /**
+     * Mesma ideia na classe ListaActivity
+     */
     private FloatingActionButton mAddItem;
     private ListView mListas;
     private DatabaseReference mDatabaseReference;
@@ -33,6 +35,9 @@ public class GerenciarListasActivity extends AppCompatActivity {
         mAddItem = findViewById(R.id.add_lista);
         mListas = findViewById(R.id.listas);
 
+        /**
+         * Quando clicar no botão de adicionar, deve ir para a AdicionarListaActivity
+         */
         mAddItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -32,6 +32,9 @@ public class CriaItemActivity extends AppCompatActivity {
         mCancela = findViewById(R.id.cancela);
         mNomeItem = findViewById(R.id.nome_input);
 
+        /**
+         * Quando clicar no botão de criar item, deve adicionar o banco o novo item
+         */
         mCriaItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -64,6 +67,9 @@ public class CriaItemActivity extends AppCompatActivity {
                 finish();
             }
         });
+        /**
+         * Caso clique no cancelar, deve sair.
+         */
         mCancela.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

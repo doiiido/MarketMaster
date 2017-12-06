@@ -30,6 +30,11 @@ public class AdicionarListaActivity extends AppCompatActivity {
         mCancela = findViewById((R.id.cancela));
         mNomeLista = findViewById(R.id.nome_lista_input);
         mDescricaoLista = findViewById(R.id.descricao_lista_input);
+
+        /**
+         * Quando clicar no botão de adicionar a lista, o aplicativo deve persistir os dados no banco.
+         * Isto é feito neste método
+         */
         mAddLista.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -78,11 +83,17 @@ public class AdicionarListaActivity extends AppCompatActivity {
 
                     prefs.edit().putString("lista", nomePath).apply();
                 }
+                /**
+                 * Em seguida, o usuário pe redirecionado para a tela da lista.
+                 */
                 Intent intent = new Intent(AdicionarListaActivity.this, ListaActivity.class);
                 startActivity(intent);
                 finish();
             }
         });
+        /**
+         * Caso o usuário cancele a operação, deve ser finalizada sem modificar o banco de dados.
+         */
         mCancela.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

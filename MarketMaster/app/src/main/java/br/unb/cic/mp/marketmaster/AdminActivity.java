@@ -6,6 +6,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+/**
+ * Esta é a classe do Administrador do Banco de dados, ou de um possível dono de um estabelecimento
+ * que opte por usar o aplicativo.
+ */
+
 public class AdminActivity extends AppCompatActivity {
 
     private Button mCriaMercado;
@@ -23,6 +28,9 @@ public class AdminActivity extends AppCompatActivity {
         mItemMercado = findViewById(R.id.item_mercado_btn);
         mVolta = findViewById(R.id.volta);
 
+        /**
+         * Quando clicar no botão de Criar mercado
+         */
         mCriaMercado.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -30,6 +38,9 @@ public class AdminActivity extends AppCompatActivity {
             }
         });
 
+        /**
+         * Quando clicar no botão cria item, deve ser redirecionado para o Cria Item Activity
+         */
         mCriaItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -38,6 +49,9 @@ public class AdminActivity extends AppCompatActivity {
             }
         });
 
+        /**
+         * Caso clique no Item do Mercado
+         */
         mItemMercado.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
