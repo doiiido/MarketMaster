@@ -13,18 +13,30 @@
         android:layout_height="wrap_content"
         android:text="Titulo da Lista"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/lista_itens"
+        app:layout_constraintBottom_toTopOf="@id/lista_itens_container"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <ListView
-        android:id="@+id/lista_itens"
+    <LinearLayout
+        android:id="@+id/lista_itens_container"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/finaliza"
         app:layout_constraintTop_toBottomOf="@id/titulo_lista">
 
-    </ListView>
+        <ListView
+            android:id="@+id/lista_itens"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:transcriptMode="alwaysScroll">
+
+        </ListView>
+
+    </LinearLayout>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/add_item"
@@ -45,7 +57,7 @@
         app:layout_constraintBottom_toBottomOf="@id/volta"
         app:layout_constraintEnd_toEndOf="@id/guideline_end"
         app:layout_constraintStart_toStartOf="@id/guideline_start"
-        app:layout_constraintTop_toBottomOf="@id/lista_itens" />
+        app:layout_constraintTop_toBottomOf="@id/lista_itens_container" />
 
     <Button
         android:id="@+id/volta"

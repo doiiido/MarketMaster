@@ -59,13 +59,13 @@ public class AdicionarListaActivity extends AppCompatActivity {
                             .child("usuarios")
                             .child(emailPath)
                             .child("listas")
-                            .child("conteudo")
+                            .child("info")
                             .push().getKey();
                     mDatabaseReference
                             .child("usuarios")
                             .child(emailPath)
                             .child("listas")
-                            .child("conteudo")
+                            .child("info")
                             .child(objectId)
                             .setValue(lista);
 

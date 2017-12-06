@@ -8,7 +8,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ListView;
 import android.widget.TextView;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class ListaActivity extends AppCompatActivity {
 
@@ -17,11 +22,17 @@ public class ListaActivity extends AppCompatActivity {
     private FloatingActionButton mAddItem;
     private Button mVolta;
     private TextView titulo;
+    private ListView mListas;
+    private EditText mInputText;
+    private DatabaseReference mDatabaseReference;
+    private ListasAdapter mAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista);
+
+        mDatabaseReference = FirebaseDatabase.getInstance().getReference();
 
         SharedPreferences prefs = getSharedPreferences("UsuarioMM", MODE_PRIVATE);
         titulo = findViewById(R.id.titulo_lista);
@@ -29,6 +40,8 @@ public class ListaActivity extends AppCompatActivity {
 
         mAddItem = findViewById(R.id.add_item);
         mVolta = findViewById(R.id.volta);
+        mListas = findViewById(R.id.lista_itens);
+
         mAddItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -42,5 +55,19 @@ public class ListaActivity extends AppCompatActivity {
                 finish();
             }
         });
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        SharedPreferences prefs = getSharedPreferences("UsuarioMM", 0);
+        mAdapter = new ListasAdapter(this, mDatabaseReference, prefs.getString("email", null));
+        mListas.setAdapter(mAdapter);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        mAdapter.cleanup();
     }
 }

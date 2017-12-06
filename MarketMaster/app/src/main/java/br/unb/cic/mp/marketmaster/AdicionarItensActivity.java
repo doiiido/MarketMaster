@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -16,6 +17,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -28,10 +30,13 @@ public class AdicionarItensActivity extends AppCompatActivity {
     private Button mVoltar;
     private Button mCriaItem;
     private Button mAddItem;
-    private ArrayList<String> mListaItens;
+    private ArrayList<DataSnapshot> mListaItens;
     private Spinner mItensDisponiveis;
     private DatabaseReference mDatabaseReference;
     private int mPosicaoSelecionada = 0;
+    private AdapterView.OnItemSelectedListener spinnerListener;
+    ArrayList<String> mNomes;
+    String mObjectId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +49,7 @@ public class AdicionarItensActivity extends AppCompatActivity {
         ChildEventListener listener = new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-                mListaItens.add(dataSnapshot.getValue(NovoItem.class).getNome());
+                mListaItens.add(dataSnapshot);
             }
 
             @Override
@@ -92,23 +97,64 @@ public class AdicionarItensActivity extends AppCompatActivity {
         });
 
         mItensDisponiveis = findViewById(R.id.itens_disp);
-        mItensDisponiveis.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
+        spinnerListener = new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 mPosicaoSelecionada = i;
-                mItensDisponiveis.setSelection(i);
+                Log.d("MarketMaster", mListaItens.get(i) + " selecionado - posição " + mPosicaoSelecionada + " com i = " + i);
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
 
             }
-        });
+        };
 
         mAddItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
+                mDatabaseReference
+                        .child("itens")
+                        .child("lista")
+                        .child(mNomes.get(mPosicaoSelecionada))
+                        .addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+
+                        SharedPreferences prefs = getSharedPreferences("UsuarioMM", 0);
+
+                        // Firebase não gosta desses caracteres
+                        String emailPath = prefs.getString("email", null);
+                        emailPath = emailPath.replace('.', '_');
+                        emailPath = emailPath.replace('#', '-');
+                        emailPath = emailPath.replace('$', '+');
+                        emailPath = emailPath.replace('[', '(');
+                        emailPath = emailPath.replace(']', ')');
+
+                        Log.d("MarketMaster", "Item " + prefs.getString("lista", null));
+
+                        mObjectId = dataSnapshot.getValue(String.class);
+                        Log.d("MarketMaster", "ObjectID = " + mObjectId);
+
+                        mDatabaseReference
+                                .child("usuarios")
+                                .child(emailPath)
+                                .child("listas")
+                                .child("conteudo")
+                                .child(prefs.getString("lista", null))
+                                .child(mNomes.get(mPosicaoSelecionada))
+                                .setValue(mObjectId);
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+
+                    }
+                });
+
+                finish();
             }
         });
     }
@@ -117,10 +163,16 @@ public class AdicionarItensActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
-        ArrayAdapter adaptador = new ArrayAdapter<>(AdicionarItensActivity.this, android.R.layout.simple_spinner_item, mListaItens);
+        mNomes = new ArrayList<>();
+        for (int i = 0; i < mListaItens.size(); ++i) {
+            mNomes.add(mListaItens.get(i).getValue(NovoItem.class).getNome());
+        }
+
+        ArrayAdapter adaptador = new ArrayAdapter<>(AdicionarItensActivity.this, android.R.layout.simple_spinner_item, mNomes);
         adaptador.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        mItensDisponiveis = findViewById(R.id.itens_disp);
         mItensDisponiveis.setAdapter(adaptador);
+
+        mItensDisponiveis.setOnItemSelectedListener(spinnerListener);
 
     }
 }
