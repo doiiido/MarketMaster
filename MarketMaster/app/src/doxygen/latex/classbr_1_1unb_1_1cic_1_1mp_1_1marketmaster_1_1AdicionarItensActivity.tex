@@ -1,0 +1,132 @@
+\hypertarget{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1AdicionarItensActivity}{}\section{br.\+unb.\+cic.\+mp.\+marketmaster.\+Adicionar\+Itens\+Activity Class Reference}
+\label{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1AdicionarItensActivity}\index{br.\+unb.\+cic.\+mp.\+marketmaster.\+Adicionar\+Itens\+Activity@{br.\+unb.\+cic.\+mp.\+marketmaster.\+Adicionar\+Itens\+Activity}}
+
+
+Classe da tela de adicionar itens.  
+
+
+Inheritance diagram for br.\+unb.\+cic.\+mp.\+marketmaster.\+Adicionar\+Itens\+Activity\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1AdicionarItensActivity}
+\end{center}
+\end{figure}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1AdicionarItensActivity_ad1aeef0f1ffd01b6a39577fcb5d7e6e9}{on\+Create}} (Bundle saved\+Instance\+State)
+\item 
+void \mbox{\hyperlink{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1AdicionarItensActivity_abd2d821e45263308009f1d4368afc67b}{on\+Start}} ()
+\end{DoxyCompactItemize}
+\subsection*{Package Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Array\+List$<$ String $>$ \mbox{\hyperlink{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1AdicionarItensActivity_a2cc1950bd5c072f17fe2043c128f252c}{m\+Nomes}}
+\item 
+String \mbox{\hyperlink{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1AdicionarItensActivity_a77345b6ff2c31869dae56e38311bce28}{m\+Object\+Id}}
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Button \mbox{\hyperlink{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1AdicionarItensActivity_ad06383e5d68fb110de348fa43b1d2bbb}{m\+Voltar}}
+\item 
+Button \mbox{\hyperlink{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1AdicionarItensActivity_a4813a04e7bf796c7f5e8aa9255d5260d}{m\+Cria\+Item}}
+\item 
+Button \mbox{\hyperlink{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1AdicionarItensActivity_a16ca19324f0ec2a8b0626d329856d2cd}{m\+Add\+Item}}
+\item 
+Array\+List$<$ Data\+Snapshot $>$ \mbox{\hyperlink{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1AdicionarItensActivity_a630a0ca8bd3a11978487176a42e511b4}{m\+Lista\+Itens}}
+\item 
+Spinner \mbox{\hyperlink{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1AdicionarItensActivity_a41e0b8c5a4b34b586e66418f240fe3dc}{m\+Itens\+Disponiveis}}
+\item 
+Database\+Reference \mbox{\hyperlink{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1AdicionarItensActivity_a6b4f9a5b188681139a14f08e51c681be}{m\+Database\+Reference}}
+\item 
+int \mbox{\hyperlink{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1AdicionarItensActivity_a90f04ff7f044bf40edc2ea676bbe1bf8}{m\+Posicao\+Selecionada}} = 0
+\item 
+Adapter\+View.\+On\+Item\+Selected\+Listener \mbox{\hyperlink{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1AdicionarItensActivity_a9de52b12a41e95480a0aabff80e06819}{spinner\+Listener}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classe da tela de adicionar itens. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1AdicionarItensActivity_ad1aeef0f1ffd01b6a39577fcb5d7e6e9}\label{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1AdicionarItensActivity_ad1aeef0f1ffd01b6a39577fcb5d7e6e9}} 
+\index{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Adicionar\+Itens\+Activity@{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Adicionar\+Itens\+Activity}!on\+Create@{on\+Create}}
+\index{on\+Create@{on\+Create}!br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Adicionar\+Itens\+Activity@{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Adicionar\+Itens\+Activity}}
+\subsubsection{\texorpdfstring{on\+Create()}{onCreate()}}
+{\footnotesize\ttfamily void br.\+unb.\+cic.\+mp.\+marketmaster.\+Adicionar\+Itens\+Activity.\+on\+Create (\begin{DoxyParamCaption}\item[{Bundle}]{saved\+Instance\+State }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+lista de itens que sera feita pelo usuário\mbox{\Hypertarget{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1AdicionarItensActivity_abd2d821e45263308009f1d4368afc67b}\label{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1AdicionarItensActivity_abd2d821e45263308009f1d4368afc67b}} 
+\index{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Adicionar\+Itens\+Activity@{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Adicionar\+Itens\+Activity}!on\+Start@{on\+Start}}
+\index{on\+Start@{on\+Start}!br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Adicionar\+Itens\+Activity@{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Adicionar\+Itens\+Activity}}
+\subsubsection{\texorpdfstring{on\+Start()}{onStart()}}
+{\footnotesize\ttfamily void br.\+unb.\+cic.\+mp.\+marketmaster.\+Adicionar\+Itens\+Activity.\+on\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1AdicionarItensActivity_a16ca19324f0ec2a8b0626d329856d2cd}\label{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1AdicionarItensActivity_a16ca19324f0ec2a8b0626d329856d2cd}} 
+\index{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Adicionar\+Itens\+Activity@{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Adicionar\+Itens\+Activity}!m\+Add\+Item@{m\+Add\+Item}}
+\index{m\+Add\+Item@{m\+Add\+Item}!br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Adicionar\+Itens\+Activity@{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Adicionar\+Itens\+Activity}}
+\subsubsection{\texorpdfstring{m\+Add\+Item}{mAddItem}}
+{\footnotesize\ttfamily Button br.\+unb.\+cic.\+mp.\+marketmaster.\+Adicionar\+Itens\+Activity.\+m\+Add\+Item\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1AdicionarItensActivity_a4813a04e7bf796c7f5e8aa9255d5260d}\label{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1AdicionarItensActivity_a4813a04e7bf796c7f5e8aa9255d5260d}} 
+\index{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Adicionar\+Itens\+Activity@{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Adicionar\+Itens\+Activity}!m\+Cria\+Item@{m\+Cria\+Item}}
+\index{m\+Cria\+Item@{m\+Cria\+Item}!br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Adicionar\+Itens\+Activity@{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Adicionar\+Itens\+Activity}}
+\subsubsection{\texorpdfstring{m\+Cria\+Item}{mCriaItem}}
+{\footnotesize\ttfamily Button br.\+unb.\+cic.\+mp.\+marketmaster.\+Adicionar\+Itens\+Activity.\+m\+Cria\+Item\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1AdicionarItensActivity_a6b4f9a5b188681139a14f08e51c681be}\label{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1AdicionarItensActivity_a6b4f9a5b188681139a14f08e51c681be}} 
+\index{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Adicionar\+Itens\+Activity@{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Adicionar\+Itens\+Activity}!m\+Database\+Reference@{m\+Database\+Reference}}
+\index{m\+Database\+Reference@{m\+Database\+Reference}!br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Adicionar\+Itens\+Activity@{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Adicionar\+Itens\+Activity}}
+\subsubsection{\texorpdfstring{m\+Database\+Reference}{mDatabaseReference}}
+{\footnotesize\ttfamily Database\+Reference br.\+unb.\+cic.\+mp.\+marketmaster.\+Adicionar\+Itens\+Activity.\+m\+Database\+Reference\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1AdicionarItensActivity_a41e0b8c5a4b34b586e66418f240fe3dc}\label{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1AdicionarItensActivity_a41e0b8c5a4b34b586e66418f240fe3dc}} 
+\index{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Adicionar\+Itens\+Activity@{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Adicionar\+Itens\+Activity}!m\+Itens\+Disponiveis@{m\+Itens\+Disponiveis}}
+\index{m\+Itens\+Disponiveis@{m\+Itens\+Disponiveis}!br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Adicionar\+Itens\+Activity@{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Adicionar\+Itens\+Activity}}
+\subsubsection{\texorpdfstring{m\+Itens\+Disponiveis}{mItensDisponiveis}}
+{\footnotesize\ttfamily Spinner br.\+unb.\+cic.\+mp.\+marketmaster.\+Adicionar\+Itens\+Activity.\+m\+Itens\+Disponiveis\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1AdicionarItensActivity_a630a0ca8bd3a11978487176a42e511b4}\label{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1AdicionarItensActivity_a630a0ca8bd3a11978487176a42e511b4}} 
+\index{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Adicionar\+Itens\+Activity@{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Adicionar\+Itens\+Activity}!m\+Lista\+Itens@{m\+Lista\+Itens}}
+\index{m\+Lista\+Itens@{m\+Lista\+Itens}!br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Adicionar\+Itens\+Activity@{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Adicionar\+Itens\+Activity}}
+\subsubsection{\texorpdfstring{m\+Lista\+Itens}{mListaItens}}
+{\footnotesize\ttfamily Array\+List$<$Data\+Snapshot$>$ br.\+unb.\+cic.\+mp.\+marketmaster.\+Adicionar\+Itens\+Activity.\+m\+Lista\+Itens\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1AdicionarItensActivity_a2cc1950bd5c072f17fe2043c128f252c}\label{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1AdicionarItensActivity_a2cc1950bd5c072f17fe2043c128f252c}} 
+\index{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Adicionar\+Itens\+Activity@{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Adicionar\+Itens\+Activity}!m\+Nomes@{m\+Nomes}}
+\index{m\+Nomes@{m\+Nomes}!br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Adicionar\+Itens\+Activity@{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Adicionar\+Itens\+Activity}}
+\subsubsection{\texorpdfstring{m\+Nomes}{mNomes}}
+{\footnotesize\ttfamily Array\+List$<$String$>$ br.\+unb.\+cic.\+mp.\+marketmaster.\+Adicionar\+Itens\+Activity.\+m\+Nomes\hspace{0.3cm}{\ttfamily [package]}}
+
+\mbox{\Hypertarget{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1AdicionarItensActivity_a77345b6ff2c31869dae56e38311bce28}\label{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1AdicionarItensActivity_a77345b6ff2c31869dae56e38311bce28}} 
+\index{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Adicionar\+Itens\+Activity@{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Adicionar\+Itens\+Activity}!m\+Object\+Id@{m\+Object\+Id}}
+\index{m\+Object\+Id@{m\+Object\+Id}!br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Adicionar\+Itens\+Activity@{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Adicionar\+Itens\+Activity}}
+\subsubsection{\texorpdfstring{m\+Object\+Id}{mObjectId}}
+{\footnotesize\ttfamily String br.\+unb.\+cic.\+mp.\+marketmaster.\+Adicionar\+Itens\+Activity.\+m\+Object\+Id\hspace{0.3cm}{\ttfamily [package]}}
+
+\mbox{\Hypertarget{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1AdicionarItensActivity_a90f04ff7f044bf40edc2ea676bbe1bf8}\label{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1AdicionarItensActivity_a90f04ff7f044bf40edc2ea676bbe1bf8}} 
+\index{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Adicionar\+Itens\+Activity@{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Adicionar\+Itens\+Activity}!m\+Posicao\+Selecionada@{m\+Posicao\+Selecionada}}
+\index{m\+Posicao\+Selecionada@{m\+Posicao\+Selecionada}!br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Adicionar\+Itens\+Activity@{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Adicionar\+Itens\+Activity}}
+\subsubsection{\texorpdfstring{m\+Posicao\+Selecionada}{mPosicaoSelecionada}}
+{\footnotesize\ttfamily int br.\+unb.\+cic.\+mp.\+marketmaster.\+Adicionar\+Itens\+Activity.\+m\+Posicao\+Selecionada = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1AdicionarItensActivity_ad06383e5d68fb110de348fa43b1d2bbb}\label{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1AdicionarItensActivity_ad06383e5d68fb110de348fa43b1d2bbb}} 
+\index{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Adicionar\+Itens\+Activity@{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Adicionar\+Itens\+Activity}!m\+Voltar@{m\+Voltar}}
+\index{m\+Voltar@{m\+Voltar}!br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Adicionar\+Itens\+Activity@{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Adicionar\+Itens\+Activity}}
+\subsubsection{\texorpdfstring{m\+Voltar}{mVoltar}}
+{\footnotesize\ttfamily Button br.\+unb.\+cic.\+mp.\+marketmaster.\+Adicionar\+Itens\+Activity.\+m\+Voltar\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1AdicionarItensActivity_a9de52b12a41e95480a0aabff80e06819}\label{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1AdicionarItensActivity_a9de52b12a41e95480a0aabff80e06819}} 
+\index{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Adicionar\+Itens\+Activity@{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Adicionar\+Itens\+Activity}!spinner\+Listener@{spinner\+Listener}}
+\index{spinner\+Listener@{spinner\+Listener}!br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Adicionar\+Itens\+Activity@{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Adicionar\+Itens\+Activity}}
+\subsubsection{\texorpdfstring{spinner\+Listener}{spinnerListener}}
+{\footnotesize\ttfamily Adapter\+View.\+On\+Item\+Selected\+Listener br.\+unb.\+cic.\+mp.\+marketmaster.\+Adicionar\+Itens\+Activity.\+spinner\+Listener\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+main/java/br/unb/cic/mp/marketmaster/\mbox{\hyperlink{AdicionarItensActivity_8java}{Adicionar\+Itens\+Activity.\+java}}\end{DoxyCompactItemize}

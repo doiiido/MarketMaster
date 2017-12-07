@@ -1,0 +1,162 @@
+\hypertarget{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1ListasAdapter}{}\section{br.\+unb.\+cic.\+mp.\+marketmaster.\+Listas\+Adapter Class Reference}
+\label{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1ListasAdapter}\index{br.\+unb.\+cic.\+mp.\+marketmaster.\+Listas\+Adapter@{br.\+unb.\+cic.\+mp.\+marketmaster.\+Listas\+Adapter}}
+
+
+Classe que implementa o adapter para o list\+View das listas.  
+
+
+Inheritance diagram for br.\+unb.\+cic.\+mp.\+marketmaster.\+Listas\+Adapter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1ListasAdapter}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1ListasAdapter_1_1ViewHolder}{View\+Holder}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1ListasAdapter_aefea99ae267922406c46fea440d4686c}{Listas\+Adapter}} (Activity activity, Database\+Reference ref, String email\+Path)
+\item 
+int \mbox{\hyperlink{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1ListasAdapter_a1901a9010e0424f505a1ee66500fbd04}{get\+Count}} ()
+\item 
+\mbox{\hyperlink{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1NovaLista}{Nova\+Lista}} \mbox{\hyperlink{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1ListasAdapter_ad4ead0d7de6a69ae1b35ae6525ed92df}{get\+Item}} (int i)
+\item 
+long \mbox{\hyperlink{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1ListasAdapter_a456a76c23cd199ae43e768288476508f}{get\+Item\+Id}} (int i)
+\item 
+View \mbox{\hyperlink{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1ListasAdapter_a02102eec45f703cd8bba2dcc7741ed9d}{get\+View}} (int i, View view, View\+Group view\+Group)
+\item 
+void \mbox{\hyperlink{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1ListasAdapter_a89209e252e631d5990bfe552aacc5af0}{cleanup}} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1ListasAdapter_a0bd71a4df35d3e69f2394b6f3186d35a}{set\+Chat\+Row\+Appearance}} (\mbox{\hyperlink{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1ListasAdapter_1_1ViewHolder}{View\+Holder}} holder)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Activity \mbox{\hyperlink{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1ListasAdapter_a637de3aa28d6d09beafebf263b61dec4}{m\+Activity}}
+\item 
+Database\+Reference \mbox{\hyperlink{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1ListasAdapter_a9655329da54a9d8f14ebe695b08ff09f}{m\+Database\+Reference}}
+\item 
+Array\+List$<$ Data\+Snapshot $>$ \mbox{\hyperlink{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1ListasAdapter_adac21a98404a640aad7af15441697c3e}{m\+Lista\+Snapshot}}
+\item 
+Child\+Event\+Listener \mbox{\hyperlink{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1ListasAdapter_abec4477f7b5f6e1f1dac969362b141b8}{m\+Listener}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classe que implementa o adapter para o list\+View das listas. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1ListasAdapter_aefea99ae267922406c46fea440d4686c}\label{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1ListasAdapter_aefea99ae267922406c46fea440d4686c}} 
+\index{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Listas\+Adapter@{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Listas\+Adapter}!Listas\+Adapter@{Listas\+Adapter}}
+\index{Listas\+Adapter@{Listas\+Adapter}!br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Listas\+Adapter@{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Listas\+Adapter}}
+\subsubsection{\texorpdfstring{Listas\+Adapter()}{ListasAdapter()}}
+{\footnotesize\ttfamily br.\+unb.\+cic.\+mp.\+marketmaster.\+Listas\+Adapter.\+Listas\+Adapter (\begin{DoxyParamCaption}\item[{Activity}]{activity,  }\item[{Database\+Reference}]{ref,  }\item[{String}]{email\+Path }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1ListasAdapter_a89209e252e631d5990bfe552aacc5af0}\label{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1ListasAdapter_a89209e252e631d5990bfe552aacc5af0}} 
+\index{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Listas\+Adapter@{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Listas\+Adapter}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Listas\+Adapter@{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Listas\+Adapter}}
+\subsubsection{\texorpdfstring{cleanup()}{cleanup()}}
+{\footnotesize\ttfamily void br.\+unb.\+cic.\+mp.\+marketmaster.\+Listas\+Adapter.\+cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1ListasAdapter_a1901a9010e0424f505a1ee66500fbd04}\label{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1ListasAdapter_a1901a9010e0424f505a1ee66500fbd04}} 
+\index{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Listas\+Adapter@{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Listas\+Adapter}!get\+Count@{get\+Count}}
+\index{get\+Count@{get\+Count}!br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Listas\+Adapter@{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Listas\+Adapter}}
+\subsubsection{\texorpdfstring{get\+Count()}{getCount()}}
+{\footnotesize\ttfamily int br.\+unb.\+cic.\+mp.\+marketmaster.\+Listas\+Adapter.\+get\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1ListasAdapter_ad4ead0d7de6a69ae1b35ae6525ed92df}\label{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1ListasAdapter_ad4ead0d7de6a69ae1b35ae6525ed92df}} 
+\index{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Listas\+Adapter@{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Listas\+Adapter}!get\+Item@{get\+Item}}
+\index{get\+Item@{get\+Item}!br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Listas\+Adapter@{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Listas\+Adapter}}
+\subsubsection{\texorpdfstring{get\+Item()}{getItem()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1NovaLista}{Nova\+Lista}} br.\+unb.\+cic.\+mp.\+marketmaster.\+Listas\+Adapter.\+get\+Item (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1ListasAdapter_a456a76c23cd199ae43e768288476508f}\label{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1ListasAdapter_a456a76c23cd199ae43e768288476508f}} 
+\index{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Listas\+Adapter@{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Listas\+Adapter}!get\+Item\+Id@{get\+Item\+Id}}
+\index{get\+Item\+Id@{get\+Item\+Id}!br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Listas\+Adapter@{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Listas\+Adapter}}
+\subsubsection{\texorpdfstring{get\+Item\+Id()}{getItemId()}}
+{\footnotesize\ttfamily long br.\+unb.\+cic.\+mp.\+marketmaster.\+Listas\+Adapter.\+get\+Item\+Id (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1ListasAdapter_a02102eec45f703cd8bba2dcc7741ed9d}\label{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1ListasAdapter_a02102eec45f703cd8bba2dcc7741ed9d}} 
+\index{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Listas\+Adapter@{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Listas\+Adapter}!get\+View@{get\+View}}
+\index{get\+View@{get\+View}!br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Listas\+Adapter@{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Listas\+Adapter}}
+\subsubsection{\texorpdfstring{get\+View()}{getView()}}
+{\footnotesize\ttfamily View br.\+unb.\+cic.\+mp.\+marketmaster.\+Listas\+Adapter.\+get\+View (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{View}]{view,  }\item[{View\+Group}]{view\+Group }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1ListasAdapter_a0bd71a4df35d3e69f2394b6f3186d35a}\label{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1ListasAdapter_a0bd71a4df35d3e69f2394b6f3186d35a}} 
+\index{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Listas\+Adapter@{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Listas\+Adapter}!set\+Chat\+Row\+Appearance@{set\+Chat\+Row\+Appearance}}
+\index{set\+Chat\+Row\+Appearance@{set\+Chat\+Row\+Appearance}!br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Listas\+Adapter@{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Listas\+Adapter}}
+\subsubsection{\texorpdfstring{set\+Chat\+Row\+Appearance()}{setChatRowAppearance()}}
+{\footnotesize\ttfamily void br.\+unb.\+cic.\+mp.\+marketmaster.\+Listas\+Adapter.\+set\+Chat\+Row\+Appearance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1ListasAdapter_1_1ViewHolder}{View\+Holder}}}]{holder }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1ListasAdapter_a637de3aa28d6d09beafebf263b61dec4}\label{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1ListasAdapter_a637de3aa28d6d09beafebf263b61dec4}} 
+\index{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Listas\+Adapter@{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Listas\+Adapter}!m\+Activity@{m\+Activity}}
+\index{m\+Activity@{m\+Activity}!br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Listas\+Adapter@{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Listas\+Adapter}}
+\subsubsection{\texorpdfstring{m\+Activity}{mActivity}}
+{\footnotesize\ttfamily Activity br.\+unb.\+cic.\+mp.\+marketmaster.\+Listas\+Adapter.\+m\+Activity\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1ListasAdapter_a9655329da54a9d8f14ebe695b08ff09f}\label{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1ListasAdapter_a9655329da54a9d8f14ebe695b08ff09f}} 
+\index{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Listas\+Adapter@{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Listas\+Adapter}!m\+Database\+Reference@{m\+Database\+Reference}}
+\index{m\+Database\+Reference@{m\+Database\+Reference}!br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Listas\+Adapter@{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Listas\+Adapter}}
+\subsubsection{\texorpdfstring{m\+Database\+Reference}{mDatabaseReference}}
+{\footnotesize\ttfamily Database\+Reference br.\+unb.\+cic.\+mp.\+marketmaster.\+Listas\+Adapter.\+m\+Database\+Reference\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1ListasAdapter_adac21a98404a640aad7af15441697c3e}\label{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1ListasAdapter_adac21a98404a640aad7af15441697c3e}} 
+\index{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Listas\+Adapter@{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Listas\+Adapter}!m\+Lista\+Snapshot@{m\+Lista\+Snapshot}}
+\index{m\+Lista\+Snapshot@{m\+Lista\+Snapshot}!br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Listas\+Adapter@{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Listas\+Adapter}}
+\subsubsection{\texorpdfstring{m\+Lista\+Snapshot}{mListaSnapshot}}
+{\footnotesize\ttfamily Array\+List$<$Data\+Snapshot$>$ br.\+unb.\+cic.\+mp.\+marketmaster.\+Listas\+Adapter.\+m\+Lista\+Snapshot\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1ListasAdapter_abec4477f7b5f6e1f1dac969362b141b8}\label{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1ListasAdapter_abec4477f7b5f6e1f1dac969362b141b8}} 
+\index{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Listas\+Adapter@{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Listas\+Adapter}!m\+Listener@{m\+Listener}}
+\index{m\+Listener@{m\+Listener}!br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Listas\+Adapter@{br\+::unb\+::cic\+::mp\+::marketmaster\+::\+Listas\+Adapter}}
+\subsubsection{\texorpdfstring{m\+Listener}{mListener}}
+{\footnotesize\ttfamily Child\+Event\+Listener br.\+unb.\+cic.\+mp.\+marketmaster.\+Listas\+Adapter.\+m\+Listener\hspace{0.3cm}{\ttfamily [private]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \textcolor{keyword}{new} ChildEventListener() \{
+        @Override
+        \textcolor{keyword}{public} \textcolor{keywordtype}{void} onChildAdded(DataSnapshot dataSnapshot, String s) \{
+            \mbox{\hyperlink{classbr_1_1unb_1_1cic_1_1mp_1_1marketmaster_1_1ListasAdapter_adac21a98404a640aad7af15441697c3e}{mListaSnapshot}}.add(dataSnapshot);
+            notifyDataSetChanged();
+        \}
+
+        @Override
+        \textcolor{keyword}{public} \textcolor{keywordtype}{void} onChildChanged(DataSnapshot dataSnapshot, String s) \{
+
+        \}
+
+        @Override
+        \textcolor{keyword}{public} \textcolor{keywordtype}{void} onChildRemoved(DataSnapshot dataSnapshot) \{
+
+        \}
+
+        @Override
+        \textcolor{keyword}{public} \textcolor{keywordtype}{void} onChildMoved(DataSnapshot dataSnapshot, String s) \{
+
+        \}
+
+        @Override
+        \textcolor{keyword}{public} \textcolor{keywordtype}{void} onCancelled(DatabaseError databaseError) \{
+
+        \}
+    \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+main/java/br/unb/cic/mp/marketmaster/\mbox{\hyperlink{ListasAdapter_8java}{Listas\+Adapter.\+java}}\end{DoxyCompactItemize}
